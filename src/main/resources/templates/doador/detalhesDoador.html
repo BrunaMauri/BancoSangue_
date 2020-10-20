@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Detalhes do Doador</title>
+	 <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
+      <link rel="stylesheet" href="style/styleCss.css"/>
+</head>
+<body>
+             
+	<header>
+	 			<a href="/doadores" class="waves-effect waves-light btn"><i class="material-icons left">view_headline</i>Lista de Doadores</a>
+		        <a href="/relatorioPorEstado" class="waves-effect waves-light btn"><i class="material-icons left">replay</i>Atualizar</a>
+	
+	</header>
+	
+	<div th:each="doador : ${doador}" class="container detalhesDoador">
+	<h5>Detalhes do Doador</h5>
+		<table class ="container">
+		
+		
+			<p>Nome: <span th:text="${doador.nome}"></span></p>
+			<p>CPF: <span th:text="${doador.cpf}"></span></p>
+			<p>RG: <span th:text="${doador.rg}"></span></p>
+			<p>Data de Nascimento: <span th:text="${doador.data_nasc}"></span></p>
+			<p>Celular: <span th:text="${doador.celular}"></span></p>
+			<p>Telefone Fixo: <span th:text="${doador.telefone_fixo}"></span></p>
+			<p>Sexo: <span th:text="${doador.sexo}"></span></p>
+			<p>Nome da Mãe: <span th:text="${doador.mae}"></span></p>
+			<p>Nome do Pai: <span th:text="${doador.pai}"></span></p>
+			<p>E-mail: <span th:text="${doador.email}"></span></p>
+			<p>Cep: <span th:text="${doador.cep}"></span></p>
+			<p>Endereço: <span th:text="${doador.endereco}"></span></p>
+			<p>Número: <span th:text="${doador.numero}"></span></p>
+			<p>Bairro: <span th:text="${doador.bairro}"></span></p>
+			<p>Cidade: <span th:text="${doador.cidade}"></span></p>
+			<p>Estado: <span th:text="${doador.estado}"></span></p>
+			<p>Altura: <span th:text="${doador.altura}"></span></p>
+			<p>Peso: <span th:text="${doador.peso}"></span></p>
+		    <p>Tipo Sanguíneo: <span th:text="${doador.tipo_sanguineo}"></span></p>
+		
+	</div>
+	</table>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		
+		<title>Banco de Sangue</title>
+		
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="style/styleCss.css"/>
+		<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<nav class = "teal">
+			<div class="nav-wrapper">
+				<div class="col s3">
+					<a href="/doadores" class="breadcrumb">Início</a>
+					<a href="/cadastrarDoador" class="breadcrumb">Cadastro de Doador</a>
+				</div>
+			</div>
+		</nav>
+		<form class ="container" method ="post">
+			<div class="input-field">
+				<label for="nome">Nome</label>
+				<input type="text" value="" name="nome"/>
+			<div class ="row">
+					
+					<div class="input-field col s3">
+						<label for="cpf">CPF</label>
+						<input type="text" value="" name="cpf"/>
+					</div>
+					<div class="input-field col s3">
+						<label for="rg">RG</label>
+						<input type="text" value="" name="rg"/>
+					</div>
+					<div class="input-field col s3">
+						<label for="data_nasc"></label>
+						<input type="date" value="" name ="data_nasc"/>
+					</div>		
+					<div class="input-field col s3">
+						<label for="sexo">Sexo</label>
+						<input type="text" value="" name ="sexo"/>
+					</div>
+					<div class="input-field col s6">
+						<label for="mãe">Nome da Mãe</label>
+						<input type="text" value="" name ="mae"/>
+					</div>
+					<div class="input-field col s6">
+						<label for="pai">Nome do Pai</label>
+						<input type="text" value="" name ="pai"/>
+					</div>
+					<div class="input-field col s3">
+						<label for="cep">CEP</label>
+						<input type="text" value="" name ="cep"/>
+					</div>
+					<div class="input-field col s7">
+						<label for="endereco">Endereço</label>
+						<input type="text" value="" name ="endereco"/>
+					</div>
+					<div class="input-field col s2">
+						<label for="numero">Número</label>
+						<input type="text" value="" name ="numero"/>
+					</div>
+					<div class="input-field col s3">
+						<label for="bairro">Bairro</label>
+						<input type="text" value="" name ="bairro"/>
+					</div>
+					<div class="input-field col s4">
+						<label for="cidade">Cidade</label>
+						<input type="text" value="" name ="cidade"/>
+					</div>
+					<div class="input-field col s5">
+						<label for="estado">Estado</label>
+						<input type="text" value="" name ="estado"/>
+					</div>
+					<div class="input-field col s6">
+						<label for="telefone_fixo">Telefone Fixo</label>
+						<input type="text" value="" name ="telefone_fixo"/>
+					</div>
+					<div class="input-field col s6">
+						<label for="celular">Celular</label>
+						<input type="text" value="" name ="celular"/>
+					</div>
+					<div class="input-field col s2">
+						<label for="altura">Altura</label>
+						<input type="text" value="" name ="altura"/>
+					</div>
+					<div class="input-field col s2">
+						<label for="peso">Peso</label>
+						<input type="text" value="" name ="peso"/>
+					</div>
+					<div class="input-field col s2">
+						<label for="tipo_sanguineo">Tipo Sanguíneo</label>
+						<input type="text" value="" name ="tipo_sanguineo"/>
+					</div>					
+				</div>
+				<div class="input-field col s2">
+					<label for="email_inline">E-mail</label>
+					<input id="email_inline" type="email" class="validate">
+					<span class="helper-text col s5" data-error="wrong" data-success="right"></span>
+				</div>	
+				<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
+			</form>
+			
+			<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+			<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+		</body>
+</html>	

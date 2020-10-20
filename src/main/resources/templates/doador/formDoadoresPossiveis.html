@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	
+	<head>
+		<title>Doadores por Tipo Sanguíneo</title>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+		
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
+		<link rel="stylesheet" href="style/styleCss.css"/>
+	</head>
+	<body>
+		
+		<nav class = "teal">
+			<div class="nav-wrapper">
+				<div class="col s3">
+					<a href="/doadores" class="breadcrumb">Início</a>
+					<a href="/relatorioPossiveisDoadores" class="breadcrumb">Quantidade de Possíveis Doadores</a>			
+				</div>
+			</div>
+		</nav>
+		
+		<table class ="container">
+			<thead>
+				<tr>
+					<th><center>Tipo Sanguíneo</center></th>
+					<th><center>Quantidade</center></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="doadorPossivelA:${doadoresPossiveisA}">
+					<td><center>  A+ </center></td>
+					<td><center><span th:text="${doadorPossivelA.quantidadeDeDoadores}"></center></span></td>	
+					
+					<tr th:each="doadorPossivelAN:${doadoresPossiveisAN}">
+						<td><center>   A- </center></td>
+						<td><center><span th:text="${doadorPossivelAN.quantidadeDeDoadores}"></center></span></td>	
+						
+						<tr th:each="doadorPossivelB:${doadoresPossiveisB}">
+							<td><center>   B+ </center></td>
+							<td><center><span th:text="${doadorPossivelB.quantidadeDeDoadores}"></center></span></td>	
+							
+							<tr th:each="doadorPossivelBN:${doadoresPossiveisBN}">
+								<td><center><center>   B- </center></td>
+									<td><center><span th:text="${doadorPossivelBN.quantidadeDeDoadores}"></center></span></td>	
+									
+									
+									<tr th:each="doadorPossivelAB:${doadoresPossiveisAB}">
+										<td><center>   AB+ </center></td>
+										<td><center><span th:text="${doadorPossivelAB.quantidadeDeDoadores}"></center></span></td>	
+										
+										
+										<tr th:each="doadorPossivelABN:${doadoresPossiveisABN}">
+											<td><center>   AB- </center></td>
+											<td><center><span th:text="${doadorPossivelABN.quantidadeDeDoadores}"></center></span></td>	
+											
+											
+											<tr th:each="doadorPossivelO:${doadoresPossiveisO}">
+												<td><center>   O+ </center></td>
+												<td><center><span th:text="${doadorPossivelO.quantidadeDeDoadores}"></center></span></td>	
+												
+												
+												<tr th:each="doadorPossivelON:${doadoresPossiveisON}">
+													<td><center>   O- </center></td>
+													<td><center><span th:text="${doadorPossivelON.quantidadeDeDoadores}"></center></span></td>					
+												</tr>
+											</tr>
+										</table>
+									</tbody>
+									
+									<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+									<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+								</body>
+							</html>							
